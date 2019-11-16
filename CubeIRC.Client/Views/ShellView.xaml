@@ -23,19 +23,11 @@
         <StatusBar Height="20" DockPanel.Dock="Bottom">
 
         </StatusBar>
-        <dragablz:TabablzControl DockPanel.Dock="Bottom" ItemTemplate="{StaticResource DefaultTabHeaderTemplate}" ContentTemplate="{StaticResource DefaultTabContent}" >
+        <dragablz:TabablzControl ItemsSource="{Binding Windows}" DockPanel.Dock="Bottom" ItemTemplate="{StaticResource DefaultTabHeaderTemplate}" ContentTemplate="{StaticResource DefaultTabContent}" >
             <dragablz:TabablzControl.InterTabController>
                 <dragablz:InterTabController />
             </dragablz:TabablzControl.InterTabController>
-            <TabItem Header="One">
-                <controls:RootConsoleControl />
-            </TabItem>
-            <TabItem Header="Two">
-                <Button HorizontalAlignment="Center" VerticalAlignment="Center">How are you doing</Button>
-            </TabItem>
-            <TabItem Header="Three">
-                <Button HorizontalAlignment="Center" VerticalAlignment="Center">Goodbye</Button>
-            </TabItem>
+           
         </dragablz:TabablzControl>
        
     </DockPanel>
