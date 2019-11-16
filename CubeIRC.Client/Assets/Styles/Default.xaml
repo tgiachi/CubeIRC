@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CubeIRC.Client.Assets.Styles">
+
+
+    <DataTemplate x:Key="DefaultTabHeaderTemplate">
+        <Label Background="Yellow" Content="{Binding Header}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="DefaultTabContent">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="asdasdasd" />
+            <TextBlock Grid.Column="1" Text="{Binding LastName}" />
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>

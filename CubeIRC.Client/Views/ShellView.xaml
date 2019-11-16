@@ -1,0 +1,42 @@
+﻿<mah:MetroWindow x:Class="CubeIRC.Client.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CubeIRC.Client.Views"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:viewModels="clr-namespace:CubeIRC.Client.ViewModels"
+        xmlns:controls="clr-namespace:CubeIRC.Client.Controls"
+        mc:Ignorable="d"
+        WindowTransitionsEnabled="False"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        d:DataContext="{d:DesignInstance Type=viewModels:ShellViewModel, IsDesignTimeCreatable=True}"
+        cal:Bind.AtDesignTime="True"
+        Icon="../Assets/Icon/icon_cube.png"
+        Title="Cube IRC" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File"></MenuItem>
+        </Menu>
+        <StatusBar Height="20" DockPanel.Dock="Bottom">
+
+        </StatusBar>
+        <dragablz:TabablzControl DockPanel.Dock="Bottom" ItemTemplate="{StaticResource DefaultTabHeaderTemplate}" ContentTemplate="{StaticResource DefaultTabContent}" >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="One">
+                <controls:RootConsoleControl />
+            </TabItem>
+            <TabItem Header="Two">
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center">How are you doing</Button>
+            </TabItem>
+            <TabItem Header="Three">
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center">Goodbye</Button>
+            </TabItem>
+        </dragablz:TabablzControl>
+       
+    </DockPanel>
+</mah:MetroWindow>
